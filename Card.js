@@ -1,24 +1,28 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Pressable, Modal, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Modal, Image } from 'react-native';
 
 import markerIcon from './assets/marker.png';
 import calendarIcon from './assets/calendar.png';
 import clockIcon from './assets/clock.png';
 import messagingIcon from './assets/messages.png';
 import profilePicture from './assets/profile-picture.png';
-import ellipsisWhite from './assets/ellipsis-white.png';
-import ellipsisGrey from './assets/ellipsis-grey.png';
 // import Dropdown from './Dropdown';
 
 const Card = () => {
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
+
   const icons = [markerIcon, calendarIcon, clockIcon, messagingIcon];
-  const iconsDisplay = icons.map(icon =>
-    <Image style={styles.icon} source={icon}/>
+  const iconsDisplay = icons.map((icon, i) =>
+    <Image style={styles.icon} source={icon} key={i}/>
   );
+
   const details = ['Gorge Garmin Street ...','Mon, September 21st','10:00AM']
-  const detailsDisplay = details.map(detail => <Text style={styles.detail}>{detail}</Text>)
+  const detailsDisplay = details.map((detail, i) => <Text style={styles.detail} key={i}>{detail}</Text>)
+
+  const ellipsis = dropdownVisible
+    ? require('./ellipsis-white.png')
+    : require('./ellipsis-grey.png');
 
   return (
     <View style={styles.container}>
@@ -32,13 +36,13 @@ const Card = () => {
         </View>
         <View style={styles.rightColumn}>
           <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-          <Pressable style={{backgroundColor: '#EEEEEE', justifyContent: 'flex-start', alignItems: 'center'}}>
-            <Image source={require('./assets/ellipsis-grey.png')}/>
-          </Pressable>
+          <TouchableOpacity>
+            <Image source={ellipsis}/>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.rsvpConfirmation}>
-        <Text style={{color:'#fff'}}>You RSVP'd yes - Event is today!</Text>
+        <Text style={{color:'#fff', fontSize: 10}}>You RSVP'd yes - Event is today!</Text>
       </View>
     </View>
   );
@@ -59,49 +63,63 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 24,
+    marginTop: 5,
     marginLeft: 15
   },
   cardBody: {
     flex: 1,
-    marginTop: 10,
+    marginTop: 5,
     flexDirection: 'row',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    justifyContent: 'space-evenly'
   },
   iconsColumn: {
+    flex: 1,
     justifyContent: 'space-evenly',
-    alignItems: 'flex-start',
-    height: 150,
-    marginLeft: -5
-  },
-  rightColumn: {
-    justifyContent: 'space-between',
     alignItems: 'center',
     height: 150,
-    marginTop: -30
+    marginTop: 8,
   },
   icon: {
     height: 30,
     margin: 5,
     resizeMode: 'contain'
   },
+  rightColumn: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: 150,
+    marginTop: -30,
+  },
   detailsColumn: {
+    flex: 3,
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
     height: 120
   },
   detail: {
-    marginTop: 10
+    marginTop: 10,
+    fontSize: 14
   },
   profilePicture: {
     height: 40,
     width: 40,
     borderRadius: 20
   },
+  button: {
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: '#EEEEEE'
+  },
   rsvpConfirmation: {
     alignSelf: 'flex-end',
     backgroundColor: '#1EBC82',
-    padding: 5,
-    borderRadius: 5
+    width: 240,
+    alignItems: 'center',
+    padding: 7,
+    borderTopLeftRadius: 10,
+    borderBottomRightRadius: 10
   }
 });
 
