@@ -20,9 +20,14 @@ const Card = () => {
   const details = ['Gorge Garmin Street ...','Mon, September 21st','10:00AM']
   const detailsDisplay = details.map((detail, i) => <Text style={styles.detail} key={i}>{detail}</Text>)
 
+  const onPress = () => setDropdownVisible(!dropdownVisible);
   const ellipsis = dropdownVisible
     ? require('./ellipsis-white.png')
     : require('./ellipsis-grey.png');
+
+  const buttonColor = dropdownVisible
+    ? '#474956'
+    : '#EEEEEE';
 
   return (
     <View style={styles.container}>
@@ -36,7 +41,7 @@ const Card = () => {
         </View>
         <View style={styles.rightColumn}>
           <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-          <TouchableOpacity>
+          <TouchableOpacity style={{backgroundColor: buttonColor}} onPress={onPress}>
             <Image source={ellipsis}/>
           </TouchableOpacity>
         </View>
