@@ -41,7 +41,7 @@ const Card = () => {
         </View>
         <View style={styles.rightColumn}>
           <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-          <TouchableOpacity style={{backgroundColor: buttonColor}} onPress={onPress}>
+          <TouchableOpacity style={{backgroundColor: buttonColor, width: 40, height: 30, borderRadius: 5, alignItems: 'center'}} onPress={onPress}>
             <Image source={ellipsis}/>
           </TouchableOpacity>
         </View>
@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 150,
-    marginTop: -30,
+    height: 140,
+    marginTop: -20,
   },
   detailsColumn: {
     flex: 3,
@@ -111,11 +111,6 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     borderRadius: 20
-  },
-  button: {
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#EEEEEE'
   },
   rsvpConfirmation: {
     alignSelf: 'flex-end',
