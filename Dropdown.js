@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import Card from './Card';
 
 const Dropdown = () => {
 
@@ -8,29 +7,47 @@ const Dropdown = () => {
     <View style={styles.dropdown}>
       <View style={styles.dropdownGroup}>
         <Image style={styles.icon} source={require('./assets/edit.png')}/>
-        <Text>Rename</Text>
+        <Text style={styles.text}>Rename</Text>
       </View>
-      <View style={styles.dropdownGroup}>
+      <View style={[{borderBottomColor: '#E8E8E8',
+      borderStyle: 'solid',
+      borderBottomWidth: 1}, styles.dropdownGroup]}>
         <Image style={styles.icon} source={require('./assets/copy.png')}/>
-        <Text>Copy</Text>
+        <Text style={styles.text}>Copy</Text>
       </View>
-      <Text>Cancel Event</Text>
+      <Text style={{color: 'red', marginTop: 10, marginLeft: 5, fontSize: 12}}>Cancel Event</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   dropdown: {
-    flex: 0.2,
+    alignSelf: 'flex-end',
+    marginTop: 215,
+    marginRight: 38,
+    paddingTop: 10,
+    height: 110,
+    width: 100,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   dropdownGroup: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: 90
+  },
+  text: {
+    fontSize: 12,
+    fontFamily: 'Noto Sans',
+    marginLeft: -10,
+    marginBottom: 12
   },
   icon: {
-    height: 25,
+    height: 15,
+    marginLeft: -7,
+    marginRight: 0,
     resizeMode: 'contain'
   }
 });

@@ -48,7 +48,7 @@ const Card = () => {
           </View>
         </View>
         <View style={styles.rsvpConfirmation}>
-          <Text style={{color:'#fff', fontSize: 10}}>You RSVP'd yes - Event is today!</Text>
+          <Text style={{color:'#fff', fontSize: 12}}>You RSVP'd yes - Event is today!</Text>
         </View>
       </View>
       {dropdownVisible && <Dropdown/>}
@@ -58,21 +58,22 @@ const Card = () => {
 
 const styles = StyleSheet.create({
   container: {
+    position: 'absolute',
     backgroundColor: '#fff',
     color: '#474956',
-    width: 300,
+    width: 325,
     height: 200,
     borderRadius: 15,
     alignItems: 'flex-start',
-    justifyContent: 'center',
-    fontFamily: 'Noto Sans'
+    justifyContent: 'center'
   },
   title: {
     fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 24,
     marginTop: 5,
-    marginLeft: 15
+    marginLeft: 15,
+    fontFamily: 'Noto Sans'
   },
   cardBody: {
     flex: 1,
@@ -108,7 +109,8 @@ const styles = StyleSheet.create({
   },
   detail: {
     marginTop: 10,
-    fontSize: 14
+    fontSize: 14,
+    fontFamily: 'Noto Sans'
   },
   profilePicture: {
     height: 40,
