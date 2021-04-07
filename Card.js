@@ -21,14 +21,20 @@ const Card = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Game Night!</Text>
       <View style={styles.cardBody}>
-        <View>
+        <View style={styles.iconsColumn}>
           {iconsDisplay}
         </View>
-        <View>
+        <View style={styles.detailsColumn}>
           {detailsDisplay}
         </View>
+        <View style={styles.rightColumn}>
+          <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
+          <Pressable>
+            <Text style={styles.title}>...</Text>
+          </Pressable>
+        </View>
       </View>
-      <Text>You RSVP'd yes - Event is today!</Text>
+      <Text style={styles.rsvpConfirmation}>You RSVP'd yes - Event is today!</Text>
     </View>
   );
 }
@@ -40,22 +46,32 @@ const styles = StyleSheet.create({
     width: 300,
     height: 250,
     borderRadius: 15,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     fontFamily: 'Noto Sans'
   },
   title: {
     fontWeight: 'bold',
     fontSize: 18,
-    lineHeight: 24
+    lineHeight: 24,
+    margin: 5
   },
   cardBody: {
     flex: 1,
     marginTop: 10,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'flex-start'
   },
   iconsColumn: {
-    justifyContent: 'space-between'
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    height: 180
+  },
+  rightColumn: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: 175,
+    marginTop: -40
   },
   icon: {
     height: 30,
@@ -63,7 +79,22 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   detailsColumn: {
-    flex: 2,
+    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    height: 120
+  },
+  detail: {
+    marginTop: 10
+  },
+  profilePicture: {
+    height: 40,
+    width: 40,
+    borderRadius: 20
+  },
+  rsvpConfirmation: {
+    alignSelf: 'flex-end',
+    backgroundColor: 'green',
+    padding: 5
   }
 });
 
