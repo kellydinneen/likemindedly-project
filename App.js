@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { AppLoading } from 'expo-app-loading';
+import AppLoading from 'expo-app-loading';
 import {
   useFonts,
   NotoSans_400Regular,
@@ -20,15 +20,14 @@ const App = () => {
       NotoSans_700Bold_Italic,
   });
 
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
-
   return (
-    <View style={{backgroundColor: '#E5E5E5', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Card/>
-    </View>
-  );
-}
+    <>
+      {!fontsLoaded && <AppLoading />}
+      {fontsLoaded && <View style={{backgroundColor: '#E5E5E5', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Card/>
+      </View>}
+    </>
+  )
+};
 
 export default App;

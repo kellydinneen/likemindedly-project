@@ -9,13 +9,15 @@ const Dropdown = () => {
         <Image style={styles.icon} source={require('./assets/edit.png')}/>
         <Text style={styles.text}>Rename</Text>
       </View>
-      <View style={[{borderBottomColor: '#E8E8E8',
-      borderStyle: 'solid',
-      borderBottomWidth: 1}, styles.dropdownGroup]}>
+      <View style={[{
+        borderBottomColor: '#E8E8E8',
+        borderStyle: 'solid',
+        borderBottomWidth: 1
+      }, styles.dropdownGroup]}>
         <Image style={styles.icon} source={require('./assets/copy.png')}/>
         <Text style={styles.text}>Copy</Text>
       </View>
-      <Text style={{color: 'red', marginTop: 10, marginLeft: 5, fontSize: 12}}>Cancel Event</Text>
+      <Text style={[{color: 'red', marginTop: 10}, styles.text]}>Cancel Event</Text>
     </View>
   );
 }

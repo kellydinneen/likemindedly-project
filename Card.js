@@ -21,7 +21,6 @@ const Card = () => {
   const details = ['Gorge Garmin Street ...','Mon, September 21st','10:00AM']
   const detailsDisplay = details.map((detail, i) => <Text style={styles.detail} key={i}>{detail}</Text>)
 
-  const onPress = () => setDropdownVisible(!dropdownVisible);
   const ellipsis = dropdownVisible
     ? require('./ellipsis-white.png')
     : require('./ellipsis-grey.png');
@@ -43,7 +42,7 @@ const Card = () => {
             </View>
             <View style={styles.rightColumn}>
               <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-              <TouchableOpacity style={{backgroundColor: buttonColor, width: 40, height: 30, borderRadius: 5, alignItems: 'center'}} onPress={onPress}>
+              <TouchableOpacity style={[{backgroundColor: buttonColor}, styles.button]} onPress={()=>setDropdownVisible(!dropdownVisible)}>
                 <Image source={ellipsis}/>
               </TouchableOpacity>
             </View>
@@ -118,6 +117,12 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     borderRadius: 20
+  },
+  button: {
+    width: 40,
+    height: 30,
+    borderRadius: 5,
+    alignItems: 'center'
   },
   rsvpConfirmation: {
     alignSelf: 'flex-end',
