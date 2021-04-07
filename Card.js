@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Pressable, Modal, Image } from 'react-native';
+
 import markerIcon from './assets/marker.png';
 import calendarIcon from './assets/calendar.png';
 import clockIcon from './assets/clock.png';
 import messagingIcon from './assets/messages.png';
 import profilePicture from './assets/profile-picture.png';
+import ellipsisWhite from './assets/ellipsis-white.png';
+import ellipsisGrey from './assets/ellipsis-grey.png';
 // import Dropdown from './Dropdown';
 
 const Card = () => {
@@ -29,12 +32,14 @@ const Card = () => {
         </View>
         <View style={styles.rightColumn}>
           <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-          <Pressable>
-            <Text style={styles.title}>...</Text>
+          <Pressable style={{backgroundColor: '#EEEEEE', justifyContent: 'flex-start', alignItems: 'center'}}>
+            <Image source={require('./assets/ellipsis-grey.png')}/>
           </Pressable>
         </View>
       </View>
-      <Text style={styles.rsvpConfirmation}>You RSVP'd yes - Event is today!</Text>
+      <View style={styles.rsvpConfirmation}>
+        <Text style={{color:'#fff'}}>You RSVP'd yes - Event is today!</Text>
+      </View>
     </View>
   );
 }
@@ -44,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     color: '#474956',
     width: 300,
-    height: 250,
+    height: 200,
     borderRadius: 15,
     alignItems: 'flex-start',
     justifyContent: 'center',
@@ -54,7 +59,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 24,
-    margin: 5
+    marginLeft: 15
   },
   cardBody: {
     flex: 1,
@@ -65,13 +70,14 @@ const styles = StyleSheet.create({
   iconsColumn: {
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
-    height: 180
+    height: 150,
+    marginLeft: -5
   },
   rightColumn: {
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 175,
-    marginTop: -40
+    height: 150,
+    marginTop: -30
   },
   icon: {
     height: 30,
@@ -93,8 +99,9 @@ const styles = StyleSheet.create({
   },
   rsvpConfirmation: {
     alignSelf: 'flex-end',
-    backgroundColor: 'green',
-    padding: 5
+    backgroundColor: '#1EBC82',
+    padding: 5,
+    borderRadius: 5
   }
 });
 
