@@ -9,7 +9,7 @@ import profilePicture from './assets/profile-picture.png';
 
 const Card = () => {
 
-  // const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const icons = [markerIcon, calendarIcon, clockIcon, messagingIcon];
   const iconsDisplay = icons.map(icon =>
     <Image style={styles.icon} source={icon}/>
