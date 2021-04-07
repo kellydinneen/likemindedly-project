@@ -20,8 +20,14 @@ const Card = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Game Night!</Text>
-      {iconsDisplay}
-      {detailsDisplay}
+      <View style={styles.cardBody}>
+        <View>
+          {iconsDisplay}
+        </View>
+        <View>
+          {detailsDisplay}
+        </View>
+      </View>
       <Text>You RSVP'd yes - Event is today!</Text>
     </View>
   );
@@ -31,8 +37,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     color: '#474956',
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 250,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
@@ -42,6 +48,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 24
+  },
+  cardBody: {
+    flex: 1,
+    marginTop: 10,
+    flexDirection: 'row'
+  },
+  iconsColumn: {
+    justifyContent: 'space-between'
+  },
+  icon: {
+    height: 30,
+    margin: 5,
+    resizeMode: 'contain'
+  },
+  detailsColumn: {
+    flex: 2,
   }
 });
 
