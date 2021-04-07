@@ -21,6 +21,7 @@ const Card = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Game Night!</Text>
       {iconsDisplay}
+      {detailsDisplay}
       <Text>You RSVP'd yes - Event is today!</Text>
     </View>
   );
