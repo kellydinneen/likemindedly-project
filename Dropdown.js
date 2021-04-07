@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     height: 110,
     width: 100,
+    borderRadius: 3,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 12,
-    fontFamily: 'Noto Sans',
+    fontFamily: 'NotoSans_400Regular',
     marginLeft: -10,
     marginBottom: 12
   },

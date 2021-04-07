@@ -6,6 +6,7 @@ import calendarIcon from './assets/calendar.png';
 import clockIcon from './assets/clock.png';
 import messagingIcon from './assets/messages.png';
 import profilePicture from './assets/profile-picture.png';
+
 import Dropdown from './Dropdown';
 
 const Card = () => {
@@ -29,31 +30,32 @@ const Card = () => {
     ? '#474956'
     : '#EEEEEE';
 
-  return (
-    <>
-      <View style={styles.container}>
-        <Text style={styles.title}>Game Night!</Text>
-        <View style={styles.cardBody}>
-          <View style={styles.iconsColumn}>
-            {iconsDisplay}
+    return (
+      <>
+        <View style={styles.container}>
+          <Text style={styles.title}>Game Night!</Text>
+          <View style={styles.cardBody}>
+            <View style={styles.iconsColumn}>
+              {iconsDisplay}
+            </View>
+            <View style={styles.detailsColumn}>
+              {detailsDisplay}
+            </View>
+            <View style={styles.rightColumn}>
+              <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
+              <TouchableOpacity style={{backgroundColor: buttonColor, width: 40, height: 30, borderRadius: 5, alignItems: 'center'}} onPress={onPress}>
+                <Image source={ellipsis}/>
+              </TouchableOpacity>
+            </View>
           </View>
-          <View style={styles.detailsColumn}>
-            {detailsDisplay}
-          </View>
-          <View style={styles.rightColumn}>
-            <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-            <TouchableOpacity style={{backgroundColor: buttonColor, width: 40, height: 30, borderRadius: 5, alignItems: 'center'}} onPress={onPress}>
-              <Image source={ellipsis}/>
-            </TouchableOpacity>
+          <View style={styles.rsvpConfirmation}>
+            <Text style={{color:'#fff', fontFamily: 'NotoSans_400Regular', fontSize: 12}}>You RSVP'd yes - Event is today!</Text>
           </View>
         </View>
-        <View style={styles.rsvpConfirmation}>
-          <Text style={{color:'#fff', fontSize: 12}}>You RSVP'd yes - Event is today!</Text>
-        </View>
-      </View>
-      {dropdownVisible && <Dropdown/>}
-    </>
-  );
+        {dropdownVisible && <Dropdown/>}
+      </>
+    )
+
 }
 
 const styles = StyleSheet.create({
@@ -73,7 +75,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginTop: 5,
     marginLeft: 15,
-    fontFamily: 'Noto Sans'
+    fontFamily: 'NotoSans_700Bold'
   },
   cardBody: {
     flex: 1,
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
   detail: {
     marginTop: 10,
     fontSize: 14,
-    fontFamily: 'Noto Sans'
+    fontFamily: 'NotoSans_400Regular'
   },
   profilePicture: {
     height: 40,
