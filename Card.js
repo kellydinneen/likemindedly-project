@@ -6,7 +6,7 @@ import calendarIcon from './assets/calendar.png';
 import clockIcon from './assets/clock.png';
 import messagingIcon from './assets/messages.png';
 import profilePicture from './assets/profile-picture.png';
-// import Dropdown from './Dropdown';
+import Dropdown from './Dropdown';
 
 const Card = () => {
 
@@ -30,26 +30,29 @@ const Card = () => {
     : '#EEEEEE';
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Game Night!</Text>
-      <View style={styles.cardBody}>
-        <View style={styles.iconsColumn}>
-          {iconsDisplay}
+    <>
+      <View style={styles.container}>
+        <Text style={styles.title}>Game Night!</Text>
+        <View style={styles.cardBody}>
+          <View style={styles.iconsColumn}>
+            {iconsDisplay}
+          </View>
+          <View style={styles.detailsColumn}>
+            {detailsDisplay}
+          </View>
+          <View style={styles.rightColumn}>
+            <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
+            <TouchableOpacity style={{backgroundColor: buttonColor, width: 40, height: 30, borderRadius: 5, alignItems: 'center'}} onPress={onPress}>
+              <Image source={ellipsis}/>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={styles.detailsColumn}>
-          {detailsDisplay}
-        </View>
-        <View style={styles.rightColumn}>
-          <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-          <TouchableOpacity style={{backgroundColor: buttonColor, width: 40, height: 30, borderRadius: 5, alignItems: 'center'}} onPress={onPress}>
-            <Image source={ellipsis}/>
-          </TouchableOpacity>
+        <View style={styles.rsvpConfirmation}>
+          <Text style={{color:'#fff', fontSize: 10}}>You RSVP'd yes - Event is today!</Text>
         </View>
       </View>
-      <View style={styles.rsvpConfirmation}>
-        <Text style={{color:'#fff', fontSize: 10}}>You RSVP'd yes - Event is today!</Text>
-      </View>
-    </View>
+      {dropdownVisible && <Dropdown/>}
+    </>
   );
 }
 
