@@ -12,7 +12,7 @@ const Card = () => {
   // const [dropdownVisible, setDropdownVisible] = useState(false);
   const icons = [markerIcon, calendarIcon, clockIcon, messagingIcon];
   const iconsDisplay = icons.map(icon =>
-    <Image style={styles.icon} src={icon}/>
+    <Image style={styles.icon} source={icon}/>
   );
   const details = ['Gorge Garmin Street ...','Mon, September 21st','10:00AM']
   const detailsDisplay = details.map(detail => <Text style={styles.detail}>{detail}</Text>)
@@ -20,6 +20,7 @@ const Card = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Game Night!</Text>
+      {iconsDisplay}
       <Text>You RSVP'd yes - Event is today!</Text>
     </View>
   );

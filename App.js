@@ -4,7 +4,7 @@ import Card from './Card';
 
 const App = () => {
   return (
-    <View style={{backgroundColor: '#E5E5E5', height: 500}}>
+    <View style={{backgroundColor: '#E5E5E5', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Card/>
     </View>
   );
