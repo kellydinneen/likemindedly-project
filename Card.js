@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Pressable, Modal } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Modal, Image } from 'react-native';
 import markerIcon from './assets/marker.png';
 import calendarIcon from './assets/calendar.png';
 import clockIcon from './assets/clock.png';
@@ -11,7 +11,9 @@ const Card = () => {
 
   // const [dropdownVisible, setDropdownVisible] = useState(false);
   const icons = [markerIcon, calendarIcon, clockIcon, messagingIcon];
-  const iconsDisplay = icons.map(icon => <Image style={styles.icon} src={icon}/>);
+  const iconsDisplay = icons.map(icon =>
+    <Image style={styles.icon} src={icon}/>
+  );
   const details = ['Gorge Garmin Street ...','Mon, September 21st','10:00AM']
   const detailsDisplay = details.map(detail => <Text style={styles.detail}>{detail}</Text>)
 
