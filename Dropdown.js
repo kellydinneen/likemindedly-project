@@ -27,8 +27,8 @@ const Dropdown = () => {
 const styles = StyleSheet.create({
   dropdown: {
     alignSelf: 'flex-end',
-    marginTop: 215,
-    marginRight: 38,
+    marginTop: 225,
+    marginRight: 37,
     paddingTop: 10,
     shadowColor: "black",
     shadowOffset:{
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     height: 110,
     width: 100,
     borderRadius: 3,
+    borderTopRightRadius: 0,
     backgroundColor: '#fff',
     alignItems: 'baseline',
     justifyContent: 'center'

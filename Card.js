@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     width: 325,
-    height: 200,
+    height: 210,
     borderRadius: 15,
     alignItems: 'flex-start',
     justifyContent: 'center'
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 24,
     marginTop: 5,
     marginLeft: 15,
@@ -94,8 +94,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    height: 150,
-    marginTop: 8,
+    height: 170
   },
   icon: {
     height: 30,
@@ -106,14 +105,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 140,
+    height: 150,
     marginTop: -20,
   },
   detailsColumn: {
     flex: 3,
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
-    height: 120
+    height: 130
   },
   detail: {
     marginTop: 10,
@@ -134,7 +133,7 @@ const styles = StyleSheet.create({
   },
   rsvpConfirmation: {
     backgroundColor: '#1EBC82',
-    width: 240,
+    width: 260,
     alignItems: 'center',
     alignSelf: 'flex-end',
     padding: 7,
