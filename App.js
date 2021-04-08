@@ -20,6 +20,8 @@ const App = () => {
       NotoSans_700Bold_Italic,
   });
 
+  console.log(fontsLoaded)
+
   return (
     <>
       {!fontsLoaded && <AppLoading />}

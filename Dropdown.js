@@ -7,17 +7,19 @@ const Dropdown = () => {
     <View style={styles.dropdown}>
       <View style={styles.dropdownGroup}>
         <Image style={styles.icon} source={require('./assets/edit.png')}/>
-        <Text style={styles.text}>Rename</Text>
+        <Text style={[{marginLeft: -8}, styles.text]}>Rename</Text>
+      </View>
+      <View style={styles.dropdownGroup}>
+        <Image style={styles.icon} source={require('./assets/copy.png')}/>
+        <Text style={[{marginLeft: -8}, styles.text]}>Copy</Text>
       </View>
       <View style={[{
-        borderBottomColor: '#E8E8E8',
+        borderTopColor: '#E8E8E8',
         borderStyle: 'solid',
-        borderBottomWidth: 1
+        borderTopWidth: 1
       }, styles.dropdownGroup]}>
-        <Image style={styles.icon} source={require('./assets/copy.png')}/>
-        <Text style={styles.text}>Copy</Text>
+        <Text style={[{color: 'red', marginTop: 10, marginLeft: 5}, styles.text]}>Cancel Event</Text>
       </View>
-      <Text style={[{color: 'red', marginTop: 10}, styles.text]}>Cancel Event</Text>
     </View>
   );
 }
@@ -28,30 +30,35 @@ const styles = StyleSheet.create({
     marginTop: 215,
     marginRight: 38,
     paddingTop: 10,
+    shadowColor: "black",
+    shadowOffset:{
+      width: 0,
+      height: 3
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 2,
     height: 110,
     width: 100,
     borderRadius: 3,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems: 'baseline',
     justifyContent: 'center'
   },
   dropdownGroup: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    width: 90
+    width: 90,
+    margin: 5
   },
   text: {
     fontSize: 12,
-    fontFamily: 'NotoSans_400Regular',
-    marginLeft: -10,
-    marginBottom: 12
+    fontFamily: 'NotoSans_400Regular'
   },
   icon: {
     height: 15,
-    marginLeft: -7,
-    marginRight: 0,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    marginLeft: -10
   }
 });
 

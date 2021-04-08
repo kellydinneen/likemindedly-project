@@ -42,8 +42,8 @@ const Card = () => {
             </View>
             <View style={styles.rightColumn}>
               <Image style={styles.profilePicture} source={require('./assets/profile-picture.png')}/>
-              <TouchableOpacity style={[{backgroundColor: buttonColor}, styles.button]} onPress={()=>setDropdownVisible(!dropdownVisible)}>
-                <Image source={ellipsis}/>
+              <TouchableOpacity activeOpacity={0.5} style={[{backgroundColor: buttonColor}, styles.button]} onPress={()=>setDropdownVisible(!dropdownVisible)}>
+                <Image style={styles.ellipsis} source={ellipsis}/>
               </TouchableOpacity>
             </View>
           </View>
@@ -62,6 +62,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     backgroundColor: '#fff',
     color: '#474956',
+    shadowColor: "black",
+    shadowOffset:{
+      width: -3,
+      height: 2
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
     width: 325,
     height: 200,
     borderRadius: 15,
@@ -122,16 +129,21 @@ const styles = StyleSheet.create({
     width: 40,
     height: 30,
     borderRadius: 5,
+    justifyContent: 'center',
     alignItems: 'center'
   },
   rsvpConfirmation: {
-    alignSelf: 'flex-end',
     backgroundColor: '#1EBC82',
     width: 240,
     alignItems: 'center',
+    alignSelf: 'flex-end',
     padding: 7,
     borderTopLeftRadius: 10,
     borderBottomRightRadius: 10
+  },
+  ellipsis: {
+    height: 25,
+    resizeMode: 'contain'
   }
 });
 
