@@ -8,9 +8,16 @@ exports[`renders correctly 1`] = `
       "backgroundColor": "#fff",
       "borderRadius": 15,
       "color": "#474956",
-      "height": 200,
+      "height": 210,
       "justifyContent": "center",
       "position": "absolute",
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": -3,
+      },
+      "shadowOpacity": 0.1,
+      "shadowRadius": 5,
       "width": 325,
     }
   }
@@ -19,7 +26,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "fontFamily": "NotoSans_700Bold",
-        "fontSize": 18,
+        "fontSize": 16,
         "fontWeight": "bold",
         "lineHeight": 24,
         "marginLeft": 15,
@@ -45,9 +52,9 @@ exports[`renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flex": 1,
-          "height": 150,
+          "height": 170,
           "justifyContent": "space-evenly",
-          "marginTop": 8,
+          "marginTop": 3,
         }
       }
     >
@@ -113,7 +120,7 @@ exports[`renders correctly 1`] = `
         Object {
           "alignItems": "flex-start",
           "flex": 3,
-          "height": 120,
+          "height": 130,
           "justifyContent": "space-evenly",
         }
       }
@@ -157,7 +164,7 @@ exports[`renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flex": 1,
-          "height": 140,
+          "height": 150,
           "justifyContent": "space-between",
           "marginTop": -20,
         }
@@ -193,6 +200,7 @@ exports[`renders correctly 1`] = `
             "backgroundColor": "#EEEEEE",
             "borderRadius": 5,
             "height": 30,
+            "justifyContent": "center",
             "opacity": 1,
             "width": 40,
           }
@@ -202,6 +210,12 @@ exports[`renders correctly 1`] = `
           source={
             Object {
               "testUri": "../../../ellipsis-grey.png",
+            }
+          }
+          style={
+            Object {
+              "height": 25,
+              "resizeMode": "contain",
             }
           }
         />
@@ -217,7 +231,7 @@ exports[`renders correctly 1`] = `
         "borderBottomRightRadius": 10,
         "borderTopLeftRadius": 10,
         "padding": 7,
-        "width": 240,
+        "width": 260,
       }
     }
   >

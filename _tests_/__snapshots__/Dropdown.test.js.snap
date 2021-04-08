@@ -4,15 +4,23 @@ exports[`renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
+      "alignItems": "baseline",
       "alignSelf": "flex-end",
       "backgroundColor": "#fff",
       "borderRadius": 3,
+      "borderTopRightRadius": 0,
       "height": 110,
       "justifyContent": "center",
-      "marginRight": 38,
-      "marginTop": 215,
+      "marginRight": 37,
+      "marginTop": 225,
       "paddingTop": 10,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
+      },
+      "shadowOpacity": 0.15,
+      "shadowRadius": 2,
       "width": 100,
     }
   }
@@ -23,6 +31,7 @@ exports[`renders correctly 1`] = `
         "alignItems": "flex-start",
         "flexDirection": "row",
         "justifyContent": "flex-start",
+        "margin": 5,
         "width": 90,
       }
     }
@@ -36,20 +45,22 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "height": 15,
-          "marginLeft": -7,
-          "marginRight": 0,
+          "marginLeft": -10,
           "resizeMode": "contain",
         }
       }
     />
     <Text
       style={
-        Object {
-          "fontFamily": "NotoSans_400Regular",
-          "fontSize": 12,
-          "marginBottom": 12,
-          "marginLeft": -10,
-        }
+        Array [
+          Object {
+            "marginLeft": -8,
+          },
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 12,
+          },
+        ]
       }
     >
       Rename
@@ -57,19 +68,13 @@ exports[`renders correctly 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
-          "borderBottomColor": "#E8E8E8",
-          "borderBottomWidth": 1,
-          "borderStyle": "solid",
-        },
-        Object {
-          "alignItems": "flex-start",
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "width": 90,
-        },
-      ]
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "margin": 5,
+        "width": 90,
+      }
     }
   >
     <Image
@@ -81,42 +86,62 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "height": 15,
-          "marginLeft": -7,
-          "marginRight": 0,
+          "marginLeft": -10,
           "resizeMode": "contain",
         }
       }
     />
     <Text
       style={
-        Object {
-          "fontFamily": "NotoSans_400Regular",
-          "fontSize": 12,
-          "marginBottom": 12,
-          "marginLeft": -10,
-        }
+        Array [
+          Object {
+            "marginLeft": -8,
+          },
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 12,
+          },
+        ]
       }
     >
       Copy
     </Text>
   </View>
-  <Text
+  <View
     style={
       Array [
         Object {
-          "color": "red",
-          "marginTop": 10,
+          "borderStyle": "solid",
+          "borderTopColor": "#E8E8E8",
+          "borderTopWidth": 1,
         },
         Object {
-          "fontFamily": "NotoSans_400Regular",
-          "fontSize": 12,
-          "marginBottom": 12,
-          "marginLeft": -10,
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "margin": 5,
+          "width": 90,
         },
       ]
     }
   >
-    Cancel Event
-  </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "red",
+            "marginLeft": 5,
+            "marginTop": 10,
+          },
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Cancel Event
+    </Text>
+  </View>
 </View>
 `;
