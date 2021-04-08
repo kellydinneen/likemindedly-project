@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "baseline",
+      "alignSelf": "flex-end",
+      "backgroundColor": "#fff",
+      "borderRadius": 3,
+      "borderTopRightRadius": 0,
+      "height": 110,
+      "justifyContent": "center",
+      "marginRight": 37,
+      "marginTop": 225,
+      "paddingTop": 10,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
+      },
+      "shadowOpacity": 0.15,
+      "shadowRadius": 2,
+      "width": 100,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "margin": 5,
+        "width": 90,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../assets/edit.png",
+        }
+      }
+      style={
+        Object {
+          "height": 15,
+          "marginLeft": -10,
+          "resizeMode": "contain",
+        }
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "marginLeft": -8,
+          },
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Rename
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "margin": 5,
+        "width": 90,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../assets/copy.png",
+        }
+      }
+      style={
+        Object {
+          "height": 15,
+          "marginLeft": -10,
+          "resizeMode": "contain",
+        }
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "marginLeft": -8,
+          },
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Copy
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderStyle": "solid",
+          "borderTopColor": "#E8E8E8",
+          "borderTopWidth": 1,
+        },
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "margin": 5,
+          "width": 90,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "red",
+            "marginLeft": 5,
+            "marginTop": 10,
+          },
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Cancel Event
+    </Text>
+  </View>
+</View>
+`;
