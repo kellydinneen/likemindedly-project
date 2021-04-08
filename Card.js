@@ -31,7 +31,7 @@ const Card = () => {
 
     return (
       <>
-        <View style={styles.container}>
+        <View style={styles.card}>
           <Text style={styles.title}>Game Night!</Text>
           <View style={styles.cardBody}>
             <View style={styles.iconsColumn}>
@@ -58,7 +58,7 @@ const Card = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  card: {
     position: 'absolute',
     backgroundColor: '#fff',
     color: '#474956',

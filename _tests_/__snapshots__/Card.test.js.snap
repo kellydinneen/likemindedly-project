@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "backgroundColor": "#fff",
+      "borderRadius": 15,
+      "color": "#474956",
+      "height": 200,
+      "justifyContent": "center",
+      "position": "absolute",
+      "width": 325,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontFamily": "NotoSans_700Bold",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "lineHeight": 24,
+        "marginLeft": 15,
+        "marginTop": 5,
+      }
+    }
+  >
+    Game Night!
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-evenly",
+        "marginTop": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "height": 150,
+          "justifyContent": "space-evenly",
+          "marginTop": 8,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/marker.png",
+          }
+        }
+        style={
+          Object {
+            "height": 30,
+            "margin": 5,
+            "resizeMode": "contain",
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/calendar.png",
+          }
+        }
+        style={
+          Object {
+            "height": 30,
+            "margin": 5,
+            "resizeMode": "contain",
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/clock.png",
+          }
+        }
+        style={
+          Object {
+            "height": 30,
+            "margin": 5,
+            "resizeMode": "contain",
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/messages.png",
+          }
+        }
+        style={
+          Object {
+            "height": 30,
+            "margin": 5,
+            "resizeMode": "contain",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 3,
+          "height": 120,
+          "justifyContent": "space-evenly",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 14,
+            "marginTop": 10,
+          }
+        }
+      >
+        Gorge Garmin Street ...
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 14,
+            "marginTop": 10,
+          }
+        }
+      >
+        Mon, September 21st
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontFamily": "NotoSans_400Regular",
+            "fontSize": 14,
+            "marginTop": 10,
+          }
+        }
+      >
+        10:00AM
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "height": 140,
+          "justifyContent": "space-between",
+          "marginTop": -20,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/profile-picture.png",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 20,
+            "height": 40,
+            "width": 40,
+          }
+        }
+      />
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#EEEEEE",
+            "borderRadius": 5,
+            "height": 30,
+            "opacity": 1,
+            "width": 40,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../ellipsis-grey.png",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-end",
+        "backgroundColor": "#1EBC82",
+        "borderBottomRightRadius": 10,
+        "borderTopLeftRadius": 10,
+        "padding": 7,
+        "width": 240,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontFamily": "NotoSans_400Regular",
+          "fontSize": 12,
+        }
+      }
+    >
+      You RSVP'd yes - Event is today!
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "flex-end",
+      "backgroundColor": "#fff",
+      "borderRadius": 3,
+      "height": 110,
+      "justifyContent": "center",
+      "marginRight": 38,
+      "marginTop": 215,
+      "paddingTop": 10,
+      "width": 100,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "width": 90,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../assets/edit.png",
+        }
+      }
+      style={
+        Object {
+          "height": 15,
+          "marginLeft": -7,
+          "marginRight": 0,
+          "resizeMode": "contain",
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "fontFamily": "NotoSans_400Regular",
+          "fontSize": 12,
+          "marginBottom": 12,
+          "marginLeft": -10,
+        }
+      }
+    >
+      Rename
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "#E8E8E8",
+          "borderBottomWidth": 1,
+          "borderStyle": "solid",
+        },
+        Object {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "width": 90,
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../assets/copy.png",
+        }
+      }
+      style={
+        Object {
+          "height": 15,
+          "marginLeft": -7,
+          "marginRight": 0,
+          "resizeMode": "contain",
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "fontFamily": "NotoSans_400Regular",
+          "fontSize": 12,
+          "marginBottom": 12,
+          "marginLeft": -10,
+        }
+      }
+    >
+      Copy
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "red",
+          "marginTop": 10,
+        },
+        Object {
+          "fontFamily": "NotoSans_400Regular",
+          "fontSize": 12,
+          "marginBottom": 12,
+          "marginLeft": -10,
+        },
+      ]
+    }
+  >
+    Cancel Event
+  </Text>
+</View>
+`;
