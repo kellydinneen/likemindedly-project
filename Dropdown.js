@@ -46,20 +46,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   dropdownGroup: {
+    margin: 5,
+    width: 90,
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    width: 90,
-    margin: 5
+    alignItems: 'flex-start'
   },
   text: {
     fontSize: 12,
     fontFamily: 'NotoSans_400Regular'
   },
   icon: {
+    marginLeft: -10,
     height: 15,
-    resizeMode: 'contain',
-    marginLeft: -10
+    resizeMode: 'contain'
   }
 });
 

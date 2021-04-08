@@ -76,11 +76,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   title: {
-    fontWeight: 'bold',
-    fontSize: 16,
     lineHeight: 24,
     marginTop: 5,
     marginLeft: 15,
+    fontWeight: 'bold',
+    fontSize: 16,
     fontFamily: 'NotoSans_700Bold'
   },
   cardBody: {
@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
   },
   detailsColumn: {
     flex: 3,
+    height: 130,
     justifyContent: 'space-evenly',
-    alignItems: 'flex-start',
-    height: 130
+    alignItems: 'flex-start'
   },
   detail: {
     marginTop: 10,
@@ -132,13 +132,13 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   rsvpConfirmation: {
-    backgroundColor: '#1EBC82',
-    width: 260,
-    alignItems: 'center',
     alignSelf: 'flex-end',
+    width: 260,
     padding: 7,
+    backgroundColor: '#1EBC82',
     borderTopLeftRadius: 10,
-    borderBottomRightRadius: 10
+    borderBottomRightRadius: 10,
+    alignItems: 'center'
   },
   ellipsis: {
     height: 25,
