@@ -15,5 +15,5 @@ This mini React Native app displays an example event card with the event's title
 - At this point, an expo window will open on your local server. From there, you can scan the QR code to open the app on your phone using the Expo mobile app, or run the app in a simulator (via Xcode).
 
 ### How to test the app
-Given the apps very limited functionality, minimal snapshot tests are written in Jest to ensure consistency in the UI.
+Given the app's very limited functionality, minimal snapshot tests are written in Jest to ensure consistency in the UI.
 - after running `npm install`, run `npm test`
