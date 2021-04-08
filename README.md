@@ -3,6 +3,8 @@
 This mini React Native app displays an example event card with the event's title and details. Users can click on the ellipsis button in the bottom right of the card to reveal a dropdown menu of options for editing the event.
 
 ### Screenshots
+![screenshot-one](IMG_3859.PNG)
+![screenshot-two](IMG_3860.PNG)
 
 ### How to run the app
 - clone down this repository
